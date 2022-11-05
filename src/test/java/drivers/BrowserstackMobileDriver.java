@@ -15,7 +15,6 @@ import java.net.URL;
 
 public class BrowserstackMobileDriver implements WebDriverProvider {
 
-    static CredentialsConfig credentialsConfig = ConfigFactory.create(CredentialsConfig.class);
     private final MobileConfig mobileConfig;
 
     public BrowserstackMobileDriver() {
@@ -25,15 +24,22 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
     @Nonnull
     @Override
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
+        CredentialsConfig credentialsConfig = ConfigFactory.create(CredentialsConfig.class, System.getProperties());
+        String user = credentialsConfig.user();
+        String key = credentialsConfig.key();
+        String app = credentialsConfig.app();
+        String deviceName = credentialsConfig.deviceName();
+        String osVersion = credentialsConfig.osVersion();
+
         MutableCapabilities mutableCapabilities = new MutableCapabilities();
         mutableCapabilities.merge(capabilities);
 
-        mutableCapabilities.setCapability("browserstack.user", "mikederugin1");
-        mutableCapabilities.setCapability("browserstack.key", "ssVXtzCY7xjkAqTzqdLd");
+        mutableCapabilities.setCapability("browserstack.user", user);
+        mutableCapabilities.setCapability("browserstack.key", key);
 
-        mutableCapabilities.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
-        mutableCapabilities.setCapability("device", "Google Pixel 3");
-        mutableCapabilities.setCapability("os_version", "9.0");
+        mutableCapabilities.setCapability("app", app);
+        mutableCapabilities.setCapability("device", deviceName);
+        mutableCapabilities.setCapability("os_version", osVersion);
 
         mutableCapabilities.setCapability("project", "Mobile Tests");
         mutableCapabilities.setCapability("build", "browserstack-build-1");
