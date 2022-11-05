@@ -73,5 +73,11 @@ task language_test(type: Test) {
     }
 }
 
+task search_test(type: Test) {
+    useJUnitPlatform{
+        includeTags "search"
+    }
+}
+
 
 

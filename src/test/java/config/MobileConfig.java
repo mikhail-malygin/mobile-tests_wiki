@@ -8,10 +8,10 @@ import org.aeonbits.owner.Config;
 public interface MobileConfig extends Config{
 
     @Key("device")
-    @DefaultValue("Galaxy S22")
-    String getDevice();
+    @DefaultValue("Galaxy Tab S8")
+    String device();
 
     @Key("osVersion")
     @DefaultValue("12.0")
-    String getOsVersion();
+    String osVersion();
 }
