@@ -2,6 +2,10 @@ package tests;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.AppiumBy;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -12,36 +16,44 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static io.qameta.allure.Allure.step;
 
-public class AndroidTests extends TestBase {
+public class WikiTests extends TestBase {
 
     @Test
     @Tag("search")
-    void searchTest() {
-        step("Type search", () -> {
+    @Owner("malyginms")
+    @DisplayName("Check a search list results")
+    @Description("Search in Wikipedia. Check a search list results")
+    @Feature("search")
+    public void searchTest() {
+        step("Type Java language in a search input", () -> {
             $(AppiumBy.accessibilityId("Search Wikipedia")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text"))
                     .sendKeys("Java language");
         });
-        step("Verify content found", () ->
+        step("Verify content found in a list results", () ->
                 $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title"))
                         .shouldHave(sizeGreaterThan(0)));
     }
 
     @Test
     @Tag("search")
-    void searchInPageTest() {
+    @Owner("malyginms")
+    @DisplayName("Check a search result in a web page")
+    @Description("Search in Wikipedia. Check a search result in a web page")
+    @Feature("search")
+    public void searchInPageTest() {
 
-        step("Type search", () -> {
+        step("Type Java language in a search input", () -> {
             $(AppiumBy.accessibilityId("Search Wikipedia")).click();
             $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text"))
                     .sendKeys("Java language");
         });
-        step("Verify content found", () ->
+        step("Verify content found in a list results", () ->
                 $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title"))
                         .shouldHave(sizeGreaterThan(0)));
-        step("Open java page", () ->
+        step("Open a java page in a search results", () ->
                 $$(AppiumBy.id("org.wikipedia.alpha:id/fragment_feed_header")).first().click());
-        step("Verify content found", () -> {
+        step("Verify content found in a list results", () -> {
             $(AppiumBy.className("android.webkit.WebView"))
                     .$$(AppiumBy.className("android.widget.TextView"))
                     .first()
@@ -51,7 +63,11 @@ public class AndroidTests extends TestBase {
 
     @Test
     @Tag("onboarding")
-    void onboardingPageTests() {
+    @Owner("malyginms")
+    @DisplayName("Pass an onboarding page")
+    @Description("Pass all pages in an onboarding page in Wikipedia")
+    @Feature("onboarding")
+    public void onboardingPageTests() {
 
         step("Check the first onboarding page", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
@@ -88,7 +104,7 @@ public class AndroidTests extends TestBase {
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_done_button"));
         });
 
-        step("get started page", () -> {
+        step("Get started page", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_done_button")).click();
 
             $(AppiumBy.id("org.wikipedia.alpha:id/main_toolbar_wordmark"));
@@ -98,7 +114,11 @@ public class AndroidTests extends TestBase {
 
     @Test
     @Tag("language")
-    void addLanguageTests() {
+    @Owner("malyginms")
+    @DisplayName("Add a language")
+    @Description("Add an extra language in Wikipedia")
+    @Feature("language")
+    public void addLanguageTests() {
 
         step("add language", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/addLangContainer")).click();
