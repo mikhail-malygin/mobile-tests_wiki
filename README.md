@@ -20,9 +20,9 @@
 <a href="https://github.com/"><img src="images/logo/github.svg" width="50" height="50"  alt="Github"/></a>
 <a href="https://www.jetbrains.com/idea/"><img src="images/logo/idea.svg" width="50" height="50"  alt="IDEA"/></a>
 <a href="https://gradle.org/"><img src="images/logo/gradle.svg" width="50" height="50"  alt="Gradle"/></a>
-<a href="https://https://appium.io/"><img src="images/appium.svg" width="50" height="50"  alt="Appium"/></a>  
-<a href="https://www.browserstack.com/"><img src="images/browserstack.svg" width="50" height="50"  alt="BrowserStack"/></a>  
-<a href="https://developer.android.com/studio"><img src="images/androidStudio.svg" width="50" height="50"  alt="AndroidStudio"/></a> 
+<a href="https:appium.io/"><img src="images/logo/appium.svg" width="50" height="50"  alt="Appium"/></a>  
+<a href="www.browserstack.com/"><img src="images/logo/browserstack.svg" width="50" height="50"  alt="BrowserStack"/></a>  
+<a href="https://developer.android.com/studio"><img src="images/logo/androidStudio.svg" width="50" height="50"  alt="AndroidStudio"/></a> 
 <a href="https://junit.org/junit5/"><img src="images/logo/junit5.svg" width="50" height="50"  alt="JUnit 5"/></a>
 <a href="https://aerokube.com/selenoid/"><img src="images/logo/selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>
 <a href="https://www.jenkins.io/"><img src="images/logo/jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
