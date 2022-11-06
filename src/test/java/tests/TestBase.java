@@ -13,6 +13,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
+import static helpers.Attach.sessionId;
 import static io.qameta.allure.Allure.step;
 
 
@@ -43,9 +44,17 @@ public class TestBase {
 
     @AfterEach
     public void afterEach() {
+        String sessionId = sessionId();
+
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
 
         step("Close driver", Selenide::closeWebDriver);
+
+        Attach.video(sessionId);
+
+        if (deviceHost.equals("browserstack")) {
+            Attach.video(sessionId);
+        }
     }
 }

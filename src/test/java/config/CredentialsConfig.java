@@ -18,4 +18,7 @@ public interface CredentialsConfig extends Config {
 
     @Key("osVersion")
     String osVersion();
+
+    @Key("password")
+    String password();
 }
