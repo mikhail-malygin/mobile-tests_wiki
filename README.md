@@ -114,7 +114,10 @@ You can find detailed description of tests and attachments(screenshots, logs, vi
 
 ## :clapper: Testing video
 
-https://app-automate.browserstack.com/sessions/30121cc0a5e1cef1c33222a70381e2aab83e177f/video?token=R2MxUm1IVnRweEl5d2YvbHoyYy9jYVE5dmlza0IwYUQ1UUgrSDYxT0J0bEpUSmQvUzdVWGgrcVMvcnhGYi9KQTVzMjBDY3pNbFcyUEZpTEg5MHZLM1E9PS0tSUQ5NU1WaVRCaVVXR3NFb3pyQzJ5QT09--c0d53815121c7e5abf4b0f982d987c2d3a3c587e&source=rest_api&diff=5.16286028
+<p align="center">
+<img title="Selenoid Video" src="images/video/test_checkResultList.gif" width="250" height="153"  alt="video"> 
+<img title="Selenoid Video" src="images/video/test_checkSearchWebPage.gif" width="250" height="153"  alt="video">
+</p>
 
 ## <img width="4%" title="Jira" src="images/logo/jira.svg"> Jira integration
 > <a target="_blank" href="https://jira.autotests.cloud/browse/AUTO-1216">Link to Jira task</a>
