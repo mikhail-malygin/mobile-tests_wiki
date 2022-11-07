@@ -20,8 +20,8 @@
 <a href="https://github.com/"><img src="images/logo/github.svg" width="50" height="50"  alt="Github"/></a>
 <a href="https://www.jetbrains.com/idea/"><img src="images/logo/idea.svg" width="50" height="50"  alt="IDEA"/></a>
 <a href="https://gradle.org/"><img src="images/logo/gradle.svg" width="50" height="50"  alt="Gradle"/></a>
-<a href="https:appium.io/"><img src="images/logo/appium.svg" width="50" height="50"  alt="Appium"/></a>  
-<a href="www.browserstack.com/"><img src="images/logo/browserstack.svg" width="50" height="50"  alt="BrowserStack"/></a>  
+<a href="https://appium.io/"><img src="images/logo/appium.svg" width="50" height="50"  alt="Appium"/></a>  
+<a href="https://www.browserstack.com/"><img src="images/logo/browserstack.svg" width="50" height="50"  alt="BrowserStack"/></a>  
 <a href="https://developer.android.com/studio"><img src="images/logo/androidStudio.svg" width="50" height="50"  alt="AndroidStudio"/></a> 
 <a href="https://junit.org/junit5/"><img src="images/logo/junit5.svg" width="50" height="50"  alt="JUnit 5"/></a>
 <a href="https://aerokube.com/selenoid/"><img src="images/logo/selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>
@@ -31,3 +31,96 @@
 <a href="https://www.atlassian.com/software/jira"><img src="images/logo/jira.svg" width="50" height="50"  alt="Jira"/></a>
 <a href="https://telegram.org/"><img src="images/logo/telegram.svg" width="50" height="50"  alt="Telegram"/></a>
 </p>
+
+## :bookmark_tabs: Test cases
+- :heavy_check_mark: Check a search list results
+- :x: Check a search result in a web page
+
+## <img width="4%" title="Jenkins" src="images/logo/jenkins.svg"> Deployment in Jenkins
+> <a target="_blank" href="https://jenkins.autotests.cloud/job/13-malyginms-unit24_mobile-tests_wiki/">Build in Jenkins</a>
+
+![This is an image](images/picture/build_jenkins.jpg)
+
+#### Build parameters
+- DeviceHost (an platform which will be used for launching tests. BrowserStack or emulation using Android Studio)
+
+![This is an image](images/picture/build_parameters_jenkins.jpg)
+
+## :desktop_computer: Running tests using terminal
+
+#### Commands for local run:
+```bash
+gradle clean test
+```
+
+```bash
+gradle clean search_test 
+```
+
+```bash
+gradle clean onboarding_test 
+```
+
+```bash
+gradle clean language_test 
+```
+
+#### Command for remote run:
+```bash
+clean search_test
+-DdeviceHost=${DEVICEHOST}
+```
+
+## <img width="4%" title="Allure" src="images/logo/allureReport.svg"> Allure reports
+> <a target="_blank" href="https://jenkins.autotests.cloud/job/13-malyginms-unit24_mobile-tests_wiki/2/allure">Link to Allure reports</a>
+
+![This is an image](images/picture/allure_reports_jenkins.jpg)
+
+#### Overview dashboard
+
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/picture/allure_reports_overview.jpg">
+</p>
+
+#### Suites dashboard
+You can find detailed description of tests and attachments(screenshots, logs, videos) which will be useful for debugging, test documentations, etc
+
+<p align="center">
+<img title="Allure Suites Dashboard" src="images/picture/allure_reports_suits.jpg">
+</p>
+
+#### Graphs dashboard
+
+<p align="center">
+<img title="Allure Suites Dashboard" src="images/picture/allure_reports_graphs.jpg">
+</p>
+
+## <img width="4%" title="AllureTestOps" src="images/logo/allureTestOps.svg"> Allure TestOps integration
+> <a target="_blank" href="https://allure.autotests.cloud/launch/16490">Link to Allure TestOps</a>
+
+![This is an image](images/picture/allure_testops_jenkins.jpg)
+
+#### Launches dashboard
+
+<p align="center">
+<img title="Allure TestOps Launches Dashboard" src="images/picture/allure_testops_launches.jpg">
+</p>
+
+#### Test cases dashboard
+
+<p align="center">
+<img title="Allure TestOps Test Cases Dashboard" src="images/picture/allure_testops_testcases.jpg">
+</p>
+
+## :clapper: Testing video
+
+https://app-automate.browserstack.com/sessions/30121cc0a5e1cef1c33222a70381e2aab83e177f/video?token=R2MxUm1IVnRweEl5d2YvbHoyYy9jYVE5dmlza0IwYUQ1UUgrSDYxT0J0bEpUSmQvUzdVWGgrcVMvcnhGYi9KQTVzMjBDY3pNbFcyUEZpTEg5MHZLM1E9PS0tSUQ5NU1WaVRCaVVXR3NFb3pyQzJ5QT09--c0d53815121c7e5abf4b0f982d987c2d3a3c587e&source=rest_api&diff=5.16286028
+
+## <img width="4%" title="Jira" src="images/logo/jira.svg"> Jira integration
+> <a target="_blank" href="https://jira.autotests.cloud/browse/AUTO-1216">Link to Jira task</a>
+
+![This is an image](images/picture/jira_task.jpg)
+
+## <img width="4%" title="Telegram" src="images/logo/telegram.svg"> Notification in telegram
+
+![This is an image](images/picture/telegram_notifications.jpg)
