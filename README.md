@@ -116,7 +116,7 @@ You can find detailed description of tests and attachments(screenshots, logs, vi
 
 <p align="center">
 <img title="Selenoid Video" src="images/video/test_checkResultList.gif" width="250" height="153"  alt="video"> 
-img title="Selenoid Video" src="images/video/test_checkSearchWebPage.gif" width="250" height="153"  alt="video">
+<img title="Selenoid Video" src="images/video/test_checkSearchWebPage.gif" width="250" height="153"  alt="video">
 </p>
 
 ## <img width="4%" title="Jira" src="images/logo/jira.svg"> Jira integration
